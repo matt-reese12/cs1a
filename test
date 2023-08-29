@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Run g++ with all errors enabled, generate output in `temp.out`
-g++ -Wall $1 -o temp.out
-./temp.out
-rm ./temp.out

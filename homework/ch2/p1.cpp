@@ -5,7 +5,7 @@
 #include <iostream>
 
 int main() {
-  int a = 62, b = 99;
+  int a = 62, b = 99, c = 0;
 
   int total = a + b;
 

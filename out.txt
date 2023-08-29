@@ -1,0 +1,34 @@
+Compiling homework/ch19/p3.cpp >>[38;5;124m
+[38;5;34m Success[0m
+Running main function in homework/ch19/p3.cpp >>[38;5;97m
+Please input a list of integers: 1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (10,10)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (9,9)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (8,8)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (7,7)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (6,6)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (5,5)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (4,4)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (3,3)
+	1 2 3 4 5 6 7 8 9 10 
+
+Final Swapping (2,2)
+	1 2 3 4 5 6 7 8 9 10 
+1 2 3 4 5 6 7 8 9 10 
+9 ops
+[0m
