@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
   AllArguments args = argparse::parse<AllArguments>(argc, argv);
 
   // if(args.verbose)
-  //       args.print();
+    
 
   if(args.test_files) {
     test_files_helper(args.test_files);
