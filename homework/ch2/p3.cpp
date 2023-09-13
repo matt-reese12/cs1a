@@ -1,18 +1,44 @@
-/* Sales Tax
- *   Write a program that will compute the total sales tax on a $52 purchase. Assume the
- *   state sales tax is 4 percent and the county sales tax is 2 percent.
- */
+//Matthew Reese     CS1A     Chapter 2, P. 81, #3
+/**************************************************************
+*
+* COMPUTE TOTAL SALES TAX
+* ____________________________________________________________
+* This program computes the total sales tax based on the
+* purchase amount, in dollars, and county and state sales tax 
+* percentages.
+*
+* Computation is based on the formula:
+* totalTax = purchaseAmount * (countyTax + stateTax) / 100
+* ____________________________________________________________
+* INPUT
+*    purchaseAmount   : The purchase amount in dollars
+*    stateTax         : The state sales tax percentage
+*    countyTax        : The county sales tax percentage
+*
+* OUTPUT
+*    totalTax          : The total state and county tax owed
+*
+**************************************************************/
+
 #include <iostream>
 
 int main() {
-  // Declaring variables
-  float purchase_amount = 52.;
-  const float STATE_TAX = 0.04, COUNTY_TAX = 0.02;
+	float purchaseAmount; // INPUT
+	int stateTax;         // INPUT
+	int countyTax;        // INPUT
+	float totalTax;       // OUTPUT
+	
+	// Initialize variables
+	purchaseAmount = 52.00f;
+	stateTax = 4;
+	countyTax = 2;
 
-  // Compute and print result
-  std::cout << "$52 purchase with " << (STATE_TAX + COUNTY_TAX) * 100 << "% tax is $"
-            << purchase_amount * (1 + STATE_TAX + COUNTY_TAX)
-            << " total." << std::endl;
+	// Compute total tax
+	totalTax = purchaseAmount * (stateTax + countyTax) / 100.f;
 
-  return 0;
+	// Output result
+	std::cout << "Total sales tax for a $" << purchaseAmount
+		<< " purchase is $" << totalTax << std::endl;
+
+	return 0;
 }
