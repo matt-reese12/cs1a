@@ -44,7 +44,7 @@ int main() {
 	cout << "(Press <Enter> for answer)" << endl;
 	cout << "  " << number1 << endl;
 	cout << "+ " << number2 << endl;
-	cout << "-----";
+	cout << "—————" << endl;
 
 	// Wait for user input
 	cin.get();
