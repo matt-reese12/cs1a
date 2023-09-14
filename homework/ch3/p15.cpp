@@ -26,6 +26,8 @@
 #include <ctime>
 
 int main() {
+	using namespace std;
+
 	int number1; // OUTPUT: random 3-digit number
 	int number2; // OUTPUT: ^
 	int sum;     // OUTPUT: Sum of number1 and number2
@@ -39,16 +41,16 @@ int main() {
 	sum = number1 + number2;
 
 	// Output prompt and randomly generated numbers
-	std::cout << "(Press <Enter> for answer)" << std::endl;
-	std::cout <<        std::setw(5) << number1 << std::endl;
-	std::cout << '+' << std::setw(4) << number2 << std::endl;
-	std::cout << "-----";
+	cout << "(Press <Enter> for answer)" << endl;
+	cout <<        setw(5) << number1 << endl;
+	cout << '+' << setw(4) << number2 << endl;
+	cout << "-----";
 
 	// Wait for user input
-	std::cin.get();
+	cin.get();
 
 	// Output sum
-	std::cout << std::setw(5) << sum << std::endl;
+	cout << setw(5) << sum << endl;
 
 	return 0;
 }
