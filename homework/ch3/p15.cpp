@@ -42,8 +42,8 @@ int main() {
 
 	// Output prompt and randomly generated numbers
 	cout << "(Press <Enter> for answer)" << endl;
-	cout <<        setw(5) << number1 << endl;
-	cout << '+' << setw(4) << number2 << endl;
+	cout << "  " << number1 << endl;
+	cout << "+ " << number2 << endl;
 	cout << "-----";
 
 	// Wait for user input
