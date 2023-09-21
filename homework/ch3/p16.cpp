@@ -1,4 +1,4 @@
-//Matthew Reese     CS1A     Chapter 3, P. 146, #16
+//Matthew Reese           CS1A           Chapter 3, P. 146, #16
 //
 /**************************************************************
 *
@@ -11,16 +11,16 @@
 * Computation is based on the equation:
 * Final Amount = Principal * (1 + Interest Rate / T) ^ T
 *   Where: T = Times Compounded
-* 
 * ____________________________________________________________
 * INPUT
 *    principal        : The initial balance in the account
-*    interestRate     : The interest rate, as a percentage
+*    interestRate     : The interest rate, as a decimal
 *    timesCompounded  : Times interest is compounded per year
 *
 * OUTPUT
 *    totalInterest    : Interest accumulated over 1 year
 *    finalAmount      : Amount in account after 1 year
+*
 **************************************************************/
 
 #include <iostream>
@@ -42,42 +42,43 @@ int main() {
 	cout << "Enter the interest rate as a percentage: "
 		<< endl;
 	cin >> interestRate;
+	interestRate /= 100;
 	cout << "Enter the times compounded per year: "
 		<< endl;
 	cin >> timesCompounded;
 
 	// Computations
-	finalAmount = principal + 
+	finalAmount = principal * 
 		pow(1 + interestRate / timesCompounded, timesCompounded);
 	totalInterest = finalAmount - principal;
 
 	// Output financial report
 	cout << endl << "Financial Report" << endl;
-	cout << "————————" << endl;
+	cout << std::string(30, '-') << endl;
 	cout << setprecision(2) << fixed << showpoint;
 	cout << left << setw(20)
 		<< "Interest Rate:";
 	cout << right << setw(9)
-		<< interestRate << "%" << endl;
+		<< interestRate * 100 << "%" << endl;
 
 	cout << left << setw(20)
 		<< "Times Compounded:";
-	cout << right << setw(9)
+	cout << right << setw(10)
 		<< timesCompounded << endl;
 
 	cout << left << setw(20)
 		<< "Principal:";
-	cout << "$" << right << setw(8)
+	cout << "$" << right << setw(9)
 		<< principal << endl;
 
 	cout << left << setw(20)
 		<< "Interest:";
-	cout << "$" << right << setw(8)
+	cout << "$" << right << setw(9)
 		<< totalInterest << endl;
 
 	cout << left << setw(20)
 		<< "Amount in Savings:";
-	cout << "$" << right << setw(8)
+	cout << "$" << right << setw(9)
 		<< finalAmount << endl;
 
 	return 0;

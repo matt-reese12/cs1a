@@ -1,8 +1,8 @@
-//Matthew Reese     CS1A     Chapter 3, P. 146, #15
+//Matthew Reese           CS1A           Chapter 3, P. 146, #15
 //
 /**************************************************************
 *
-* GENERATE AND CHECK ADDITION PROBLEM
+* GENERATE ADDITION PROBLEM
 * ____________________________________________________________
 * This program generates a random 3-digit addition problem,
 * then outputs the answer after user input.
@@ -11,12 +11,12 @@
 * number = 100 + rand() % 900
 * ____________________________________________________________
 * INPUT
-* seed    : A unique value to seed the random number generator
+*    seed    : A unique value to seed the random number generator
 *
 * OUTPUT
-* number1 : A random 3-digit number
-* number2 : A random 3-digit number
-* sum     : The sum of the 2 randomly generated numbers
+*    number1 : A random 3-digit number
+*    number2 : A random 3-digit number
+*    sum     : The sum of the 2 randomly generated numbers
 *
 **************************************************************/
 
