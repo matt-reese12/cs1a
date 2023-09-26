@@ -74,7 +74,7 @@ int main() {
 	cout << "Enter starting time in 24h format (HH.MM)";
 	cin >> timeInputBuf;
 	cout << endl; // Formatting for IDEOne
-	hoursBuf = userInput;
+	hoursBuf = timeInputBuf;
 	minutesBuf = 100 * (timeInputBuf - hoursBuf);
 	// Convert buffers to minutes in full
 	startingTime = 60 * hoursBuf + minutesBuf;
@@ -127,21 +127,21 @@ int main() {
 		// are based on the formula table derived above
 		// Three boolean flags require 8 checks (2^3)
 		// to cover all possible conditions.
-		if (sLTEe && sINtp && yINtp)
+		if (sLTEe && sINtp && eINtp)
 			morningMins = e - s;
-		else if (sLTEe && sINtp && !yINtp)
+		else if (sLTEe && sINtp && !eINtp)
 			morningMins = tp_e - s;
-		else if (sLTEe && !sINtp && yINtp)
+		else if (sLTEe && !sINtp && eINtp)
 			morningMins = e - tp_s;
-		else if (sLTEe && !sINtp && !yINtp)
+		else if (sLTEe && !sINtp && !eINtp)
 			morningMins = tp_e - tp_s;
-		else if (!sLTEe && sINtp && yINtp)
+		else if (!sLTEe && sINtp && eINtp)
 			morningMins = (tp_e - s) + (tp_s - e);
-		else if (!sLTEe && sINtp && !yINtp)
+		else if (!sLTEe && sINtp && !eINtp)
 			morningMins = tp_e - s;
-		else if (!sLTEe && !sINtp && yINtp)
+		else if (!sLTEe && !sINtp && eINtp)
 			morningMins = e - tp_s;
-		else // (!sLTEe && !sINtp && !yINtp)
+		else // (!sLTEe && !sINtp && !eINtp)
 			morningMins = 0; // Not strictly necessary
 	}
 
@@ -164,21 +164,21 @@ int main() {
 		// are based on the formula table derived above
 		// Three boolean flags require 8 checks (2^3)
 		// to cover all possible conditions.
-		if (sLTEe && sINtp && yINtp)
+		if (sLTEe && sINtp && eINtp)
 			morningMins = e - s;
-		else if (sLTEe && sINtp && !yINtp)
+		else if (sLTEe && sINtp && !eINtp)
 			morningMins = tp_e - s;
-		else if (sLTEe && !sINtp && yINtp)
+		else if (sLTEe && !sINtp && eINtp)
 			morningMins = e - tp_s;
-		else if (sLTEe && !sINtp && !yINtp)
+		else if (sLTEe && !sINtp && !eINtp)
 			morningMins = tp_e - tp_s;
-		else if (!sLTEe && sINtp && yINtp)
+		else if (!sLTEe && sINtp && eINtp)
 			morningMins = (tp_e - s) + (tp_s - e);
-		else if (!sLTEe && sINtp && !yINtp)
+		else if (!sLTEe && sINtp && !eINtp)
 			morningMins = tp_e - s;
-		else if (!sLTEe && !sINtp && yINtp)
+		else if (!sLTEe && !sINtp && eINtp)
 			morningMins = e - tp_s;
-		else // (!sLTEe && !sINtp && !yINtp)
+		else // (!sLTEe && !sINtp && !eINtp)
 			morningMins = 0; // Not strictly necessary
 	}
 	// Calculating minutes spent in the night period
@@ -200,21 +200,21 @@ int main() {
 		// are based on the formula table derived above
 		// Three boolean flags require 8 checks (2^3)
 		// to cover all possible conditions.
-		if (sLTEe && sINtp && yINtp)
+		if (sLTEe && sINtp && eINtp)
 			morningMins = e - s;
-		else if (sLTEe && sINtp && !yINtp)
+		else if (sLTEe && sINtp && !eINtp)
 			morningMins = tp_e - s;
-		else if (sLTEe && !sINtp && yINtp)
+		else if (sLTEe && !sINtp && eINtp)
 			morningMins = e - tp_s;
-		else if (sLTEe && !sINtp && !yINtp)
+		else if (sLTEe && !sINtp && !eINtp)
 			morningMins = tp_e - tp_s;
-		else if (!sLTEe && sINtp && yINtp)
+		else if (!sLTEe && sINtp && eINtp)
 			morningMins = (tp_e - s) + (tp_s - e);
-		else if (!sLTEe && sINtp && !yINtp)
+		else if (!sLTEe && sINtp && !eINtp)
 			morningMins = tp_e - s;
-		else if (!sLTEe && !sINtp && yINtp)
+		else if (!sLTEe && !sINtp && eINtp)
 			morningMins = e - tp_s;
-		else // (!sLTEe && !sINtp && !yINtp)
+		else // (!sLTEe && !sINtp && !eINtp)
 			morningMins = 0; // Not strictly necessary
 	}
 
