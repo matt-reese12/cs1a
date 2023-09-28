@@ -165,21 +165,21 @@ int main() {
 		// Three boolean flags require 8 checks (2^3)
 		// to cover all possible conditions.
 		if (sLTEe && sINtp && eINtp)
-			morningMins = e - s;
+			middayMins = e - s;
 		else if (sLTEe && sINtp && !eINtp)
-			morningMins = tp_e - s;
+			middayMins = tp_e - s;
 		else if (sLTEe && !sINtp && eINtp)
-			morningMins = e - tp_s;
+			middayMins = e - tp_s;
 		else if (sLTEe && !sINtp && !eINtp)
-			morningMins = tp_e - tp_s;
+			middayMins = tp_e - tp_s;
 		else if (!sLTEe && sINtp && eINtp)
-			morningMins = (tp_e - s) + (tp_s - e);
+			middayMins = (tp_e - s) + (tp_s - e);
 		else if (!sLTEe && sINtp && !eINtp)
-			morningMins = tp_e - s;
+			middayMins = tp_e - s;
 		else if (!sLTEe && !sINtp && eINtp)
-			morningMins = e - tp_s;
+			middayMins = e - tp_s;
 		else // (!sLTEe && !sINtp && !eINtp)
-			morningMins = 0; // Not strictly necessary
+			middayMins = 0; // Not strictly necessary
 	}
 	// Calculating minutes spent in the night period
 	{
@@ -201,21 +201,21 @@ int main() {
 		// Three boolean flags require 8 checks (2^3)
 		// to cover all possible conditions.
 		if (sLTEe && sINtp && eINtp)
-			morningMins = e - s;
+			nightMins = e - s;
 		else if (sLTEe && sINtp && !eINtp)
-			morningMins = tp_e - s;
+			nightMins = tp_e - s;
 		else if (sLTEe && !sINtp && eINtp)
-			morningMins = e - tp_s;
+			nightMins = e - tp_s;
 		else if (sLTEe && !sINtp && !eINtp)
-			morningMins = tp_e - tp_s;
+			nightMins = tp_e - tp_s;
 		else if (!sLTEe && sINtp && eINtp)
-			morningMins = (tp_e - s) + (tp_s - e);
+			nightMins = (tp_e - s) + (tp_s - e);
 		else if (!sLTEe && sINtp && !eINtp)
-			morningMins = tp_e - s;
+			nightMins = tp_e - s;
 		else if (!sLTEe && !sINtp && eINtp)
-			morningMins = e - tp_s;
+			nightMins = e - tp_s;
 		else // (!sLTEe && !sINtp && !eINtp)
-			morningMins = 0; // Not strictly necessary
+			nightMins = 0; // Not strictly necessary
 	}
 
 	// Add cost associated with each time period
