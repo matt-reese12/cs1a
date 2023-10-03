@@ -41,7 +41,9 @@ int main() {
 		cin >> storeSales;
 		cout << endl; // IDEOne formatting
 
-		salesChart += "Store " << storeIndex << ": ";
+		salesChart += "Store ";
+		salesChart += storeIndex;
+		salesChart += ": ";
 		// The following would be much simpler, but was not in textbook:
 		//salesChart += string(storeSales / GRAPH_SCALE, '*');
 		for (int dollars = GRAPH_SCALE; dollars <= storeSales; dollars += GRAPH_SCALE) {
